@@ -9,18 +9,15 @@ module.exports = {
         type: DataTypes.INTEGER,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING,
-      },
       patient_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      description: {
+      ilness: {
         type: DataTypes.STRING,
       },
-      ilness: {
-        type: DataTypes.INTEGER,
+      description: {
+        type: DataTypes.STRING,
       },
       created_at: {
         allowNull: false,

@@ -18,25 +18,22 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING,
-      },
-      patient_id: {
+      patientId: {
         type: DataTypes.INTEGER,
         references: {
           model: "patients",
           key: "id"
         }
       },
+      ilness: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       description: {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      ilness: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-      },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: DataTypes.DATE,
       },

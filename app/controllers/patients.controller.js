@@ -33,7 +33,7 @@ module.exports = {
     }
   },
 
-  list: async (req, res, next) => {
+  read: async (req, res, next) => {
     try {
       const result = await models.sequelize.transaction(async (transaction) => {
         const patients = await models.patients.findAll()
@@ -49,7 +49,7 @@ module.exports = {
     }
   },
 
-  profile: async (req, res, next) => {
+  readOne: async (req, res, next) => {
     try {
       const result = await models.sequelize.transaction(async (transaction) => {
         const patient = await models.patients.findByPk(req.params.id, { transaction })
@@ -103,6 +103,8 @@ module.exports = {
     try {
       const result = await models.sequelize.transaction(async (transaction) => {
         const patient = await models.patients.findByPk(req.params.id, { transaction })
+        if (!patient) throw new CustomError('Patient not found', 404)
+
         const DeletedPatient = await patient.destroy({ transaction })
 
         return DeletedPatient
