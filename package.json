@@ -1,7 +1,7 @@
 {
-  "name": "express-mysql",
+  "name": "api-abdi",
   "version": "0.1.0",
-  "description": "Express-mysql REST API (NodeJS)",
+  "description": "api-abdi REST API (NodeJS)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
