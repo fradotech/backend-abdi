@@ -1,37 +1,26 @@
+const Sequelize = require('sequelize');
+
 module.exports = {
   up: async (queryInterface, DataTypes) => {
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable('check_up_histories', {
       id: {
         allowNull: false,
         autoIncrement: true,
         type: DataTypes.INTEGER,
         primaryKey: true,
       },
-      first_name: {
+      name: {
         type: DataTypes.STRING,
       },
-      last_name: {
-        type: DataTypes.STRING,
-      },
-      email: {
-        type: DataTypes.STRING,
+      patient_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        unique: true,
       },
-      password: {
+      description: {
         type: DataTypes.STRING,
       },
-      role: {
-        type: DataTypes.STRING,
-        defaultValue: 'User'
-      },
-      verify: {
+      ilness: {
         type: DataTypes.INTEGER,
-        defaultValue: false
-      },
-      token: {
-        type: DataTypes.STRING,
-        allowNull: true,
       },
       created_at: {
         allowNull: false,
@@ -45,10 +34,10 @@ module.exports = {
           'CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
         ),
       },
-    });
+    })
   },
-  
+
   down: async (queryInterface) => {
-    await queryInterface.dropTable('users')
+    await queryInterface.dropTable('check_up_histories')
   },
 }

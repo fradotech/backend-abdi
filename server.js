@@ -20,7 +20,7 @@ app.use(helmet())
 app.use(cors)
 
 const routes = require('./app/routes/index')
-routes.map((x) => app.use('/api/' + process.env.API_VERSION + x.basePath, x.router))
+routes.map((x) => app.use('/api/' + process.env.VERSION + x.basePath, x.router))
 
 app.use(express.static('public'))
 app.use((err, req, res, next) => { errorHandler(err, req, res, next) })
