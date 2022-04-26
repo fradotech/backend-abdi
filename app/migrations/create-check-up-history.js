@@ -10,7 +10,7 @@ module.exports = {
         primaryKey: true,
       },
       patient_id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       ilness: {
