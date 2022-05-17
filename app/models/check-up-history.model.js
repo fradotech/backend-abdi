@@ -3,11 +3,8 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class CheckUpHistory extends Model {
     static associate(models) {
-      models.check_up_histories.belongsTo(models.patients, {
-        foreignKey: {
-          allowNull: false
-        }
-      })
+      models.check_up_histories.belongsTo(models.patients)
+      models.patients.hasMany(models.check_up_histories)
     }
   }
   CheckUpHistory.init(
