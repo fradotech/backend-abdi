@@ -5,17 +5,25 @@ module.exports = {
       [
         {
           patient_id: 1,
-          ilness: "stress",
-          description: "description",
+          ilness: "Sehat kok",
+          description: "Software Developer",
         }, {
           patient_id: 2,
-          ilness: "stress",
-          description: "description",
+          ilness: "Pusing",
+          description: "UI/UX Designer",
         }, {
           patient_id: 3,
-          ilness: "stress",
-          description: "description",
-        }, 
+          ilness: "Pusing",
+          description: "Project Manager",
+        }, {
+          patient_id: 4,
+          ilness: "Pusing",
+          description: "QA Engineer",
+        }, {
+          patient_id: 5,
+          ilness: "Pusing",
+          description: "Frontend Developer",
+        },
       ],
       {},
     );
