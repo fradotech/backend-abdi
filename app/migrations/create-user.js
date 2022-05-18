@@ -41,9 +41,7 @@ module.exports = {
       updated_at: {
         allowNull: false,
         type: DataTypes.DATE,
-        defaultValue: DataTypes.literal(
-          'CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
-        ),
+        defaultValue: DataTypes.literal('CURRENT_TIMESTAMP'),
       },
     });
   },
