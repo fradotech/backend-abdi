@@ -6,7 +6,7 @@ module.exports = {
         {
           first_name: 'Framesta',
           last_name: 'Fernando',
-          email: 'fradotech@gmail.com',
+          email: 'fradotech.id@gmail.com',
           password: '$2b$10$NteiAbfGrOjh76Wne204Z.M5HeFP.Yzc5s8so6k0opoCzmu0k.q3W', // fradoo
         }, {
           first_name: 'Mochammad Alghifary Syaichul',
