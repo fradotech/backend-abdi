@@ -19,18 +19,18 @@ module.exports = {
     },
   },
   production: {
-    username: 'xjmrfwbombtmee',
-    password: 'b942041e5ee5d8eb7601a310aab121383a657a069284ec5d0460d3c61782bbdb',
-    database: 'danunrr5vomb6r',
-    host: 'ec2-52-3-2-245.compute-1.amazonaws.com',
+    username: 'ucwtsbwomjhhdu',
+    password: 'ee46ca54f27e097dbd68071f9549f116f60ae486015afc688081255beefd74ae',
+    database: 'd1ehooqp0ret6p',
+    host: 'ec2-54-86-224-85.compute-1.amazonaws.com',
     port: 5432,
     dialect: 'postgres',
     timezone: '+07:00',
     logging: false,
     dialectOptions: {
       ssl: {
-        require: true, // This will help you. But you will see nwe error
-        rejectUnauthorized: false // This line will fix new error
+        require: true,
+        rejectUnauthorized: false
       }
     },
     define: {
