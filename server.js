@@ -34,7 +34,7 @@ app.use((req, res) => {
     })
 })
 
-const server = app.listen(process.env.PORT || 3000, () => {
+const server = app.listen(process.env.PORT, () => {
   const host = server.address().address
   const { port } = server.address()
   console.log(`App listening at ${host}:${port}`)
