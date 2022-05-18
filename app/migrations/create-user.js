@@ -27,7 +27,7 @@ module.exports = {
       },
       verify: {
         type: DataTypes.INTEGER,
-        defaultValue: false
+        defaultValue: '0'
       },
       token: {
         type: DataTypes.STRING,
