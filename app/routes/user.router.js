@@ -5,7 +5,7 @@ const controllers = require('../controllers/index')
 const { authMiddleware } = require('../middlewares/auth.js')
 
 router.put('/', [ authMiddleware ], controllers.userController.update)
-router.get('/', [ authMiddleware ], controllers.userController.profile)
+router.get('/me', [ authMiddleware ], controllers.userController.profile)
 
 module.exports = {
   basePath: '/user',
